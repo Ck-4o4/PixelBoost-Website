@@ -22,7 +22,11 @@ const VideoGallery = () => {
             boxShadow: '0 20px 40px -12px rgba(0, 0, 0, 0.15)',
             border: '1px solid rgba(0,0,0,0.05)',
             backgroundColor: '#000',
-            position: 'relative'
+            position: 'relative',
+            height: '400px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center'
           }}>
             <video 
               src={src}
@@ -33,7 +37,7 @@ const VideoGallery = () => {
                 width: '100%',
                 height: '100%',
                 display: 'block',
-                objectFit: 'cover'
+                objectFit: 'contain'
               }}
             />
           </div>
