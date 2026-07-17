@@ -38,11 +38,11 @@ const projects = [
   }
 ];
 
-const categories = ["All", "Website", "Apps", "Graphics", "Shoots"];
+const categories = ["Website", "Apps", "Graphics", "Shoots"];
 
 const WorkPage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [activeCategory, setActiveCategory] = useState("Website");
 
   const nextProject = () => {
     setCurrentIndex((prev) => (prev === projects.length - 1 ? 0 : prev + 1));
@@ -298,24 +298,14 @@ const WorkPage = () => {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4 }}
           >
-            {(activeCategory === "All" || activeCategory === "Website") && (
-              <div style={{ marginBottom: activeCategory === "All" ? '8rem' : '0' }}>
-                {activeCategory === "All" && (
-                  <h4 style={{ fontSize: '1.5rem', fontWeight: 700, color: '#0F172A', marginBottom: '2rem', textAlign: 'center' }}>Featured Web Experiences</h4>
-                )}
+            {activeCategory === "Website" && (
+              <div>
                 {renderCaseStudies()}
               </div>
             )}
 
-            {(activeCategory === "All" || activeCategory === "Graphics") && (
+            {activeCategory === "Graphics" && (
               <div>
-                {activeCategory === "All" && (
-                  <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-                    <div style={{ width: '40px', height: '3px', backgroundColor: '#E2E8F0', margin: '0 auto 2rem auto', borderRadius: '2px' }}></div>
-                    <h4 style={{ fontSize: '1.5rem', fontWeight: 700, color: '#0F172A', marginBottom: '0.5rem' }}>Visual & Graphics Portfolio</h4>
-                    <p style={{ color: '#64748B' }}>A collection of our creative design work.</p>
-                  </div>
-                )}
                 <PortfolioGallery />
               </div>
             )}
