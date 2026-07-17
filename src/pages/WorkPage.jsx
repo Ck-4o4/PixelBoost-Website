@@ -300,6 +300,7 @@ const WorkPage = () => {
           >
             {activeCategory === "Website" && (
               <div>
+                <h4 style={{ fontSize: '1.5rem', fontWeight: 700, color: '#0F172A', marginBottom: '2rem', textAlign: 'center' }}>Recent Work</h4>
                 {renderCaseStudies()}
               </div>
             )}
