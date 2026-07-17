@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, ArrowRight, Monitor, Palette, Globe, MapPin, ExternalLink, ShieldCheck, TreePine, Navigation } from 'lucide-react';
 import PortfolioGallery from '../components/PortfolioGallery';
 import VideoGallery from '../components/VideoGallery';
+import AppGallery from '../components/AppGallery';
+
 
 const projects = [
   {
@@ -319,12 +321,8 @@ const WorkPage = () => {
             )}
 
             {activeCategory === "Apps" && (
-              <div style={{ textAlign: 'center', padding: '6rem 0', color: '#64748B' }}>
-                <div style={{ width: '60px', height: '60px', borderRadius: '50%', backgroundColor: '#F1F5F9', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem auto' }}>
-                  <Palette size={24} color="#94A3B8" />
-                </div>
-                <h4 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#0F172A', marginBottom: '0.5rem' }}>New projects coming soon</h4>
-                <p>We are currently updating our portfolio for the {activeCategory} category. Check back later!</p>
+              <div>
+                <AppGallery />
               </div>
             )}
           </motion.div>
