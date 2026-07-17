@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, ArrowRight, Monitor, Palette, Globe, MapPin, ExternalLink, ShieldCheck, TreePine, Navigation } from 'lucide-react';
 import PortfolioGallery from '../components/PortfolioGallery';
+import VideoGallery from '../components/VideoGallery';
 
 const projects = [
   {
@@ -311,7 +312,13 @@ const WorkPage = () => {
               </div>
             )}
 
-            {(activeCategory === "Apps" || activeCategory === "Shoots") && (
+            {activeCategory === "Shoots" && (
+              <div>
+                <VideoGallery />
+              </div>
+            )}
+
+            {activeCategory === "Apps" && (
               <div style={{ textAlign: 'center', padding: '6rem 0', color: '#64748B' }}>
                 <div style={{ width: '60px', height: '60px', borderRadius: '50%', backgroundColor: '#F1F5F9', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem auto' }}>
                   <Palette size={24} color="#94A3B8" />
