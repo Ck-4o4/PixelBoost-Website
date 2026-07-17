@@ -2,8 +2,8 @@ import React from 'react';
 
 const VideoGallery = () => {
   const videos = [
-    "/Shoots/falcon podcast1.MOV",
-    "/Shoots/falcon podcast2.MOV"
+    "/Shoots/falcon-podcast1.MOV",
+    "/Shoots/falcon-podcast2.MOV"
   ];
 
   return (
