@@ -4,6 +4,7 @@ import { motion, useScroll } from 'framer-motion';
 import Navbar from './components/Navbar';
 import CustomCursor from './components/CustomCursor';
 import Contact from './components/Contact';
+import WhatsAppButton from './components/WhatsAppButton';
 
 // Pages
 import Home from './pages/Home';
@@ -36,6 +37,7 @@ const AppContent = () => {
     <>
       <CustomCursor />
       <ScrollToHash />
+      <WhatsAppButton />
       
       {/* Scroll Progress Bar */}
       <motion.div
