@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle2, Loader2, Send, AlertCircle, RefreshCw, Mail, MessageCircle, MapPin, Phone } from 'lucide-react';
-import { WEB3FORMS_ACCESS_KEY, getWhatsAppLink, COMPANY_PHONE, COMPANY_ADDRESS } from '../config/forms';
+import { WEB3FORMS_ACCESS_KEY, getWhatsAppLink, COMPANY_PHONE, COMPANY_ADDRESS, SOCIAL_LINKS } from '../config/forms';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -405,9 +405,22 @@ const Contact = () => {
             <span>&copy; {new Date().getFullYear()} PixelBoost. All rights reserved.</span>
           </div>
           <div style={{ display: 'flex', gap: '2rem' }}>
-            <a href="#" style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Twitter</a>
-            <a href="#" style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>LinkedIn</a>
-            <a href="#" style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Instagram</a>
+            <a 
+              href={SOCIAL_LINKS.linkedin} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}
+            >
+              LinkedIn
+            </a>
+            <a 
+              href={SOCIAL_LINKS.instagram} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}
+            >
+              Instagram
+            </a>
           </div>
         </div>
       </div>

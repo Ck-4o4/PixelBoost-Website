@@ -14,5 +14,7 @@ export const getWhatsAppLink = (customText = '') => {
   const encodedText = encodeURIComponent(customText || 'Hi PixelBoost! I would like to inquire about your services.');
   return `https://wa.me/${cleanNumber}?text=${encodedText}`;
 };
-
-
+export const SOCIAL_LINKS = {
+  instagram: 'https://www.instagram.com/pixelboost_in/',
+  linkedin: 'https://www.linkedin.com/in/amit-n-8a81a7228/'
+};
