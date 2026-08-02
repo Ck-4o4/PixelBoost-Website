@@ -34,6 +34,12 @@ const instagramReels = [
     title: 'Brand Growth Reel',
     url: 'https://www.instagram.com/reel/DOlqnE5k_pl/',
     badge: '🎯 High Engagement'
+  },
+  {
+    id: 'DbTI12bzbfi',
+    title: 'Featured Reel Campaign',
+    url: 'https://www.instagram.com/reel/DbTI12bzbfi/',
+    badge: '💥 Viral Content'
   }
 ];
 
