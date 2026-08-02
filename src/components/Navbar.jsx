@@ -91,6 +91,8 @@ const Navbar = () => {
         <div style={{ display: 'none' }} className="desktop-menu">
           <div style={{ display: 'flex', gap: '2.5rem', alignItems: 'center' }}>
             <a href="#expertise" onClick={(e) => handleSectionClick(e, 'expertise')} className="nav-link" style={linkStyle}>Expertise</a>
+            <a href="#meta-ads" onClick={(e) => handleSectionClick(e, 'meta-ads')} className="nav-link" style={linkStyle}>Meta Ads</a>
+            <a href="#viral-reels" onClick={(e) => handleSectionClick(e, 'viral-reels')} className="nav-link" style={linkStyle}>Viral Reels</a>
             <Link to="/work" className="nav-link" style={linkStyle}>Work</Link>
             <a href="#process" onClick={(e) => handleSectionClick(e, 'process')} className="nav-link" style={linkStyle}>Process</a>
             <Link to="/careers" className="nav-link" style={linkStyle}>Careers</Link>
@@ -135,6 +137,8 @@ const Navbar = () => {
             }}
           >
             <a href="#expertise" style={linkStyle} onClick={(e) => handleSectionClick(e, 'expertise')}>Expertise</a>
+            <a href="#meta-ads" style={linkStyle} onClick={(e) => handleSectionClick(e, 'meta-ads')}>Meta Ads</a>
+            <a href="#viral-reels" style={linkStyle} onClick={(e) => handleSectionClick(e, 'viral-reels')}>Viral Reels</a>
             <Link to="/work" style={linkStyle} onClick={() => setIsMobileMenuOpen(false)}>Work</Link>
             <a href="#process" style={linkStyle} onClick={(e) => handleSectionClick(e, 'process')}>Process</a>
             <Link to="/careers" style={linkStyle} onClick={() => setIsMobileMenuOpen(false)}>Careers</Link>
