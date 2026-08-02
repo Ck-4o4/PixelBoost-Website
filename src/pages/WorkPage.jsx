@@ -4,7 +4,7 @@ import { ArrowLeft, ArrowRight, Monitor, Palette, Globe, MapPin, ExternalLink, S
 import PortfolioGallery from '../components/PortfolioGallery';
 import VideoGallery from '../components/VideoGallery';
 import AppGallery from '../components/AppGallery';
-
+import MetaAdsGallery from '../components/MetaAdsGallery';
 
 const projects = [
   {
@@ -41,7 +41,7 @@ const projects = [
   }
 ];
 
-const categories = ["Website", "Apps", "Graphics", "Shoots"];
+const categories = ["Website", "Meta Ads Results", "Apps", "Graphics", "Shoots"];
 
 const WorkPage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -305,6 +305,12 @@ const WorkPage = () => {
               <div>
                 <h4 style={{ fontSize: '1.5rem', fontWeight: 700, color: '#0F172A', marginBottom: '2rem', textAlign: 'center' }}>Recent Work</h4>
                 {renderCaseStudies()}
+              </div>
+            )}
+
+            {activeCategory === "Meta Ads Results" && (
+              <div>
+                <MetaAdsGallery />
               </div>
             )}
 
