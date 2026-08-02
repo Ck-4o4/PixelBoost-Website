@@ -12,23 +12,25 @@ import CareersPage from './pages/CareersPage';
 import JobDetailsPage from './pages/JobDetailsPage';
 import WorkPage from './pages/WorkPage';
 
-// Scroll to Hash behavior for React Router
+// Scroll behavior for React Router
 const ScrollToHash = () => {
-  const { pathname, hash } = useLocation();
+  const { pathname, hash, state } = useLocation();
 
   useEffect(() => {
-    if (hash) {
+    const targetId = hash ? hash.replace('#', '') : state?.scrollTo;
+    if (targetId) {
       setTimeout(() => {
-        const element = document.getElementById(hash.replace('#', ''));
+        const element = document.getElementById(targetId);
         if (element) element.scrollIntoView({ behavior: 'smooth' });
       }, 100);
     } else {
       window.scrollTo(0, 0);
     }
-  }, [pathname, hash]);
+  }, [pathname, hash, state]);
 
   return null;
 };
+
 
 const AppContent = () => {
   const { scrollYProgress } = useScroll();

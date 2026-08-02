@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +16,24 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleSectionClick = (e, sectionId) => {
+    e.preventDefault();
+    setIsMobileMenuOpen(false);
+
+    if (location.pathname === '/') {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      navigate('/', { state: { scrollTo: sectionId } });
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) element.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  };
 
   const navStyle = {
     position: 'fixed',
@@ -35,7 +55,8 @@ const Navbar = () => {
     fontWeight: 500,
     fontSize: '0.95rem',
     position: 'relative',
-    padding: '0.5rem 0'
+    padding: '0.5rem 0',
+    cursor: 'pointer'
   };
 
   return (
@@ -69,16 +90,17 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <div style={{ display: 'none' }} className="desktop-menu">
           <div style={{ display: 'flex', gap: '2.5rem', alignItems: 'center' }}>
-            <Link to="/#expertise" className="nav-link" style={linkStyle}>Expertise</Link>
+            <a href="#expertise" onClick={(e) => handleSectionClick(e, 'expertise')} className="nav-link" style={linkStyle}>Expertise</a>
             <Link to="/work" className="nav-link" style={linkStyle}>Work</Link>
-            <Link to="/#process" className="nav-link" style={linkStyle}>Process</Link>
+            <a href="#process" onClick={(e) => handleSectionClick(e, 'process')} className="nav-link" style={linkStyle}>Process</a>
             <Link to="/careers" className="nav-link" style={linkStyle}>Careers</Link>
             <motion.a 
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               href="#contact" 
+              onClick={(e) => handleSectionClick(e, 'contact')}
               className="btn-primary" 
-              style={{ padding: '0.6rem 1.5rem', fontSize: '0.9rem' }}
+              style={{ padding: '0.6rem 1.5rem', fontSize: '0.9rem', cursor: 'pointer' }}
             >
               Let's Talk
             </motion.a>
@@ -112,11 +134,11 @@ const Navbar = () => {
               overflow: 'hidden'
             }}
           >
-            <Link to="/#expertise" style={linkStyle} onClick={() => setIsMobileMenuOpen(false)}>Expertise</Link>
+            <a href="#expertise" style={linkStyle} onClick={(e) => handleSectionClick(e, 'expertise')}>Expertise</a>
             <Link to="/work" style={linkStyle} onClick={() => setIsMobileMenuOpen(false)}>Work</Link>
-            <Link to="/#process" style={linkStyle} onClick={() => setIsMobileMenuOpen(false)}>Process</Link>
+            <a href="#process" style={linkStyle} onClick={(e) => handleSectionClick(e, 'process')}>Process</a>
             <Link to="/careers" style={linkStyle} onClick={() => setIsMobileMenuOpen(false)}>Careers</Link>
-            <a href="#contact" className="btn-primary" style={{ textAlign: 'center' }} onClick={() => setIsMobileMenuOpen(false)}>Let's Talk</a>
+            <a href="#contact" className="btn-primary" style={{ textAlign: 'center' }} onClick={(e) => handleSectionClick(e, 'contact')}>Let's Talk</a>
           </motion.div>
         )}
       </AnimatePresence>
@@ -145,3 +167,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
