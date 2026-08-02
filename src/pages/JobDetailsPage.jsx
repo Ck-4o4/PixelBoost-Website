@@ -100,8 +100,11 @@ const JobDetailsPage = () => {
       });
 
       const result = await response.json();
+      const jobWhatsappMsg = `Hi PixelBoost! I just submitted an application for ${job.title}.\nName: ${applicantData.fullName}\nEmail: ${applicantData.email}\nPhone: ${applicantData.phone || 'N/A'}\nPortfolio: ${applicantData.portfolio}`;
+      
       if (result.success || WEB3FORMS_ACCESS_KEY === 'YOUR_WEB3FORMS_ACCESS_KEY') {
         setSubmitStatus('success');
+        window.open(getWhatsAppLink(jobWhatsappMsg), '_blank');
       } else {
         setErrorMessage(result.message || 'Failed to submit application. Please try again.');
         setSubmitStatus('idle');
@@ -109,6 +112,8 @@ const JobDetailsPage = () => {
     } catch (error) {
       if (WEB3FORMS_ACCESS_KEY === 'YOUR_WEB3FORMS_ACCESS_KEY') {
         setSubmitStatus('success');
+        const jobWhatsappMsg = `Hi PixelBoost! I just submitted an application for ${job.title}.\nName: ${applicantData.fullName}\nEmail: ${applicantData.email}\nPhone: ${applicantData.phone || 'N/A'}\nPortfolio: ${applicantData.portfolio}`;
+        window.open(getWhatsAppLink(jobWhatsappMsg), '_blank');
       } else {
         setErrorMessage('Network error while submitting. Please try again.');
         setSubmitStatus('idle');

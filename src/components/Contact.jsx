@@ -57,6 +57,7 @@ const Contact = () => {
       const result = await response.json();
       if (result.success || WEB3FORMS_ACCESS_KEY === 'YOUR_WEB3FORMS_ACCESS_KEY') {
         setStatus('success');
+        window.open(whatsappUrl, '_blank');
       } else {
         setErrorMessage(result.message || 'Failed to send inquiry. Please check your connection and try again.');
         setStatus('idle');
@@ -64,6 +65,7 @@ const Contact = () => {
     } catch (error) {
       if (WEB3FORMS_ACCESS_KEY === 'YOUR_WEB3FORMS_ACCESS_KEY') {
         setStatus('success');
+        window.open(whatsappUrl, '_blank');
       } else {
         setErrorMessage('Network error while sending. Please try again.');
         setStatus('idle');
