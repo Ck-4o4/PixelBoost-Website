@@ -1,3 +1,5 @@
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Flame, ExternalLink, Play } from 'lucide-react';
 
 const InstagramIcon = ({ size = 20, color = "currentColor" }) => (
