@@ -1,6 +1,6 @@
 /**
  * Auto-synced via Notion CMS
- * Last synced: 2026-09-15T07:10:48.874Z
+ * Last synced: 2026-09-15T07:16:59.634Z
  */
 
 export const BLOG_CATEGORIES = [
@@ -14,7 +14,7 @@ export const BLOG_CATEGORIES = [
 export const blogs = [
   {
     "id": "omnichannel-growth-engine",
-    "title": "Building an Omnichannel Growth Engine: Combining Paid, Organic & Retention",
+    "title": "Trial  for the last",
     "excerpt": "Relying on a single acquisition channel is dangerous. Here is how modern brands build resilient, multi-channel growth systems that compound over time.",
     "category": "Growth Marketing",
     "coverImage": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1400&auto=format&fit=crop",
