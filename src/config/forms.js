@@ -7,6 +7,8 @@ export const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY ||
 // Company Contact Details
 export const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER || '916352032201';
 export const COMPANY_PHONE = '+91 63520 32201';
+export const COMPANY_PHONE_2 = '+91 82389 40960';
+export const COMPANY_PHONES = [COMPANY_PHONE, COMPANY_PHONE_2];
 export const COMPANY_ADDRESS = 'PNTC Tower, B-304, Times Of India Press Rd, Prahlad Nagar, Ahmedabad, Gujarat 380015';
 
 export const getWhatsAppLink = (customText = '') => {

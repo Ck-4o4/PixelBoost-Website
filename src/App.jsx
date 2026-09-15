@@ -11,6 +11,8 @@ import Home from './pages/Home';
 import CareersPage from './pages/CareersPage';
 import JobDetailsPage from './pages/JobDetailsPage';
 import WorkPage from './pages/WorkPage';
+import BlogListPage from './pages/BlogListPage';
+import BlogPostPage from './pages/BlogPostPage';
 
 // Scroll behavior for React Router
 const ScrollToHash = () => {
@@ -62,6 +64,9 @@ const AppContent = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/work" element={<WorkPage />} />
+        <Route path="/blog" element={<BlogListPage />} />
+        <Route path="/blogs" element={<BlogListPage />} />
+        <Route path="/blog/:slug" element={<BlogPostPage />} />
         <Route path="/careers" element={<CareersPage />} />
         <Route path="/careers/:jobId" element={<JobDetailsPage />} />
       </Routes>

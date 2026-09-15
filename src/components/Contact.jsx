@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle2, Loader2, Send, AlertCircle, RefreshCw, Mail, MessageCircle, MapPin, Phone } from 'lucide-react';
-import { WEB3FORMS_ACCESS_KEY, getWhatsAppLink, COMPANY_PHONE, COMPANY_ADDRESS, SOCIAL_LINKS } from '../config/forms';
+import { WEB3FORMS_ACCESS_KEY, getWhatsAppLink, COMPANY_PHONE, COMPANY_PHONE_2, COMPANY_ADDRESS, SOCIAL_LINKS } from '../config/forms';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -383,6 +383,12 @@ const Contact = () => {
                 style={{ color: 'var(--accent-secondary)', fontSize: '1.1rem', fontWeight: 600, textDecoration: 'none', display: 'block' }}
               >
                 {COMPANY_PHONE}
+              </a>
+              <a 
+                href={`tel:${COMPANY_PHONE_2.replace(/\s+/g, '')}`} 
+                style={{ color: 'var(--accent-secondary)', fontSize: '1.1rem', fontWeight: 600, textDecoration: 'none', display: 'block', marginTop: '0.2rem' }}
+              >
+                {COMPANY_PHONE_2}
               </a>
               <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.85rem', marginTop: '0.2rem' }}>
                 Mon - Sat | 9:30 AM - 7:00 PM

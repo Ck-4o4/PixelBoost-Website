@@ -94,6 +94,7 @@ const Navbar = () => {
             <a href="#meta-ads" onClick={(e) => handleSectionClick(e, 'meta-ads')} className="nav-link" style={linkStyle}>Meta Ads</a>
             <Link to="/work" className="nav-link" style={linkStyle}>Work</Link>
             <a href="#process" onClick={(e) => handleSectionClick(e, 'process')} className="nav-link" style={linkStyle}>Process</a>
+            <Link to="/blog" className="nav-link" style={linkStyle}>Blog</Link>
             <Link to="/careers" className="nav-link" style={linkStyle}>Careers</Link>
             <motion.a 
               whileHover={{ scale: 1.02 }}
@@ -139,6 +140,7 @@ const Navbar = () => {
             <a href="#meta-ads" style={linkStyle} onClick={(e) => handleSectionClick(e, 'meta-ads')}>Meta Ads</a>
             <Link to="/work" style={linkStyle} onClick={() => setIsMobileMenuOpen(false)}>Work</Link>
             <a href="#process" style={linkStyle} onClick={(e) => handleSectionClick(e, 'process')}>Process</a>
+            <Link to="/blog" style={linkStyle} onClick={() => setIsMobileMenuOpen(false)}>Blog</Link>
             <Link to="/careers" style={linkStyle} onClick={() => setIsMobileMenuOpen(false)}>Careers</Link>
             <a href="#contact" className="btn-primary" style={{ textAlign: 'center' }} onClick={(e) => handleSectionClick(e, 'contact')}>Let's Talk</a>
           </motion.div>

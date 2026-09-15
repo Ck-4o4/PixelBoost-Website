@@ -6,15 +6,20 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "sync:notion": "node scripts/syncNotion.js",
     "lint": "oxlint",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@notionhq/client": "^5.26.0",
+    "dotenv": "^17.4.2",
     "framer-motion": "^12.42.2",
+    "lottie-web": "^5.13.0",
     "lucide-react": "^1.23.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
-    "react-router-dom": "^7.18.1"
+    "react-router-dom": "^7.18.1",
+    "three": "^0.185.1"
   },
   "devDependencies": {
     "@types/react": "^19.2.17",

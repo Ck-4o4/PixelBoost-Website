@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="pbGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38b6ff" />
+      <stop offset="100%" stop-color="#0084ff" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#38b6ff" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Double Circle Interlocking P Loop -->
+  <g fill="none" stroke="url(#pbGlow)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" filter="url(#shadow)">
+    <!-- Outer Arc Top-Right -->
+    <path d="M 100 20 A 80 80 0 0 1 180 100 A 80 80 0 0 1 125 174" />
+    <!-- Outer Arc Bottom-Left -->
+    <path d="M 100 180 A 80 80 0 0 1 20 100 A 80 80 0 0 1 75 26" />
+    
+    <!-- Inner Loop Left P -->
+    <path d="M 68 62 L 68 138 A 38 38 0 0 0 106 176" />
+    <path d="M 68 62 A 38 38 0 0 1 106 24 A 38 38 0 0 1 144 62 L 144 80" stroke-width="8" />
+
+    <!-- Inner Loop Right P Interlock -->
+    <path d="M 132 138 L 132 62 A 38 38 0 0 0 94 24" />
+    <path d="M 132 138 A 38 38 0 0 1 94 176 A 38 38 0 0 1 56 138 L 56 120" stroke-width="8" />
+  </g>
+</svg>
