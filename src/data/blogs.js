@@ -1,6 +1,6 @@
 /**
  * Auto-synced via Notion CMS
- * Last synced: 2026-09-15T07:16:59.634Z
+ * Last synced: 2026-09-15T12:39:13.217Z
  */
 
 export const BLOG_CATEGORIES = [
@@ -13,55 +13,13 @@ export const BLOG_CATEGORIES = [
 
 export const blogs = [
   {
-    "id": "omnichannel-growth-engine",
-    "title": "Trial  for the last",
-    "excerpt": "Relying on a single acquisition channel is dangerous. Here is how modern brands build resilient, multi-channel growth systems that compound over time.",
-    "category": "Growth Marketing",
-    "coverImage": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1400&auto=format&fit=crop",
-    "author": {
-      "name": "Chirag K.",
-      "role": "Contributor",
-      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format&fit=crop"
-    },
-    "date": "September 15, 2026",
-    "readTime": "1 min read",
-    "featured": false,
-    "tags": [
-      "Growth Marketing"
-    ],
-    "content": [
-      {
-        "type": "paragraph",
-        "text": "Brands that achieve sustained eight-figure revenues don't rely solely on one traffic source. They build a holistic ecosystem where paid media feeds organic brand awareness, which in turn fuels high-margin retention loops through email and WhatsApp marketing."
-      },
-      {
-        "type": "heading",
-        "level": 2,
-        "text": "The Triad of Sustainable Scale"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Top of Funnel (Paid + Viral Shoots): Generating predictable, scalable cold traffic through Meta Ads and Instagram Reels.",
-          "Middle of Funnel (Website & UX): High-converting, lightning-fast digital storefronts that maximize conversion rates.",
-          "Bottom of Funnel (Retention): WhatsApp and email automation flows capturing up to 30% of total revenue with zero additional ad spend."
-        ]
-      },
-      {
-        "type": "quote",
-        "text": "Acquisition gets customers through the door. Experience and retention make them stay and buy repeatedly.",
-        "author": "PixelBoost Team"
-      }
-    ]
-  },
-  {
     "id": "branding-principles-for-d2c-growth",
-    "title": "The Brand Trust Equation: Turning Cold Traffic Into Loyal Customers",
+    "title": "title",
     "excerpt": "In a crowded marketplace, design consistency is what transforms one-time buyers into lifelong brand advocates. Here is how we build high-converting brand identities.",
     "category": "Branding & Design",
-    "coverImage": "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=1400&auto=format&fit=crop",
+    "coverImage": "https://app.notion.com/images/page-cover/texturelabs_glass_124S.jpg",
     "author": {
-      "name": "Design Team",
+      "name": "sawai ji",
       "role": "Contributor",
       "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format&fit=crop"
     },
