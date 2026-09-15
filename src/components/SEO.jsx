@@ -79,20 +79,35 @@ const SEO = ({
 
     // 5. Article Structured Data (Schema.org JSON-LD)
     if (article) {
+      let isoDate = new Date().toISOString();
+      if (datePublished) {
+        try {
+          const parsed = new Date(datePublished);
+          if (!isNaN(parsed.getTime())) {
+            isoDate = parsed.toISOString();
+          }
+        } catch {
+          isoDate = new Date().toISOString();
+        }
+      }
+
       updateStructuredData('article-schema', {
         '@context': 'https://schema.org',
         '@type': 'BlogPosting',
         'headline': title,
         'description': finalDesc,
         'image': finalImage,
-        'datePublished': datePublished || new Date().toISOString(),
+        'datePublished': isoDate,
+        'dateModified': new Date().toISOString(),
         'author': {
           '@type': 'Person',
-          'name': authorName || 'PixelBoost Team'
+          'name': authorName || 'PixelBoost Team',
+          'url': 'https://pixelboost.in'
         },
         'publisher': {
           '@type': 'Organization',
           'name': SITE_NAME,
+          'url': 'https://pixelboost.in/',
           'logo': {
             '@type': 'ImageObject',
             'url': DEFAULT_IMAGE
