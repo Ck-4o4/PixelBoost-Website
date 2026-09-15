@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
@@ -12,13 +12,28 @@ import {
   Lightbulb, 
   ChevronRight 
 } from 'lucide-react';
-import { blogs } from '../data/blogs';
+import { blogs as fallbackBlogs } from '../data/blogs';
 
 const BlogPostPage = () => {
   const { slug } = useParams();
   const [copied, setCopied] = useState(false);
+  const [blogList, setBlogList] = useState(fallbackBlogs);
 
-  const post = blogs.find((b) => b.id === slug);
+  useEffect(() => {
+    fetch('/api/blogs')
+      .then((res) => {
+        if (!res.ok) throw new Error('API error');
+        return res.json();
+      })
+      .then((data) => {
+        if (data.blogs && Array.isArray(data.blogs) && data.blogs.length > 0) {
+          setBlogList(data.blogs);
+        }
+      })
+      .catch(() => {});
+  }, []);
+
+  const post = blogList.find((b) => b.id === slug);
 
   if (!post) {
     return (
@@ -57,7 +72,7 @@ const BlogPostPage = () => {
     );
   }
 
-  const relatedPosts = blogs
+  const relatedPosts = blogList
     .filter((b) => b.id !== post.id && (b.category === post.category || true))
     .slice(0, 3);
 

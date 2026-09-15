@@ -1,15 +1,30 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Clock, ArrowRight, BookOpen, ChevronRight } from 'lucide-react';
-import { blogs, BLOG_CATEGORIES } from '../data/blogs';
+import { blogs as fallbackBlogs, BLOG_CATEGORIES } from '../data/blogs';
 
 const BlogListPage = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
+  const [blogList, setBlogList] = useState(fallbackBlogs);
+
+  useEffect(() => {
+    fetch('/api/blogs')
+      .then((res) => {
+        if (!res.ok) throw new Error('API error');
+        return res.json();
+      })
+      .then((data) => {
+        if (data.blogs && Array.isArray(data.blogs) && data.blogs.length > 0) {
+          setBlogList(data.blogs);
+        }
+      })
+      .catch(() => {});
+  }, []);
 
   const filteredBlogs = useMemo(() => {
-    return blogs.filter((post) => {
+    return blogList.filter((post) => {
       const matchesCategory = selectedCategory === "All" || post.category === selectedCategory;
       const matchesSearch =
         post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -17,11 +32,11 @@ const BlogListPage = () => {
         post.tags?.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
       return matchesCategory && matchesSearch;
     });
-  }, [selectedCategory, searchQuery]);
+  }, [blogList, selectedCategory, searchQuery]);
 
   const featuredPost = useMemo(() => {
-    return blogs.find(b => b.featured) || blogs[0];
-  }, []);
+    return blogList.find(b => b.featured) || blogList[0];
+  }, [blogList]);
 
   return (
     <div style={{
