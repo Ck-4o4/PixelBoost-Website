@@ -1,6 +1,6 @@
 /**
  * Auto-synced via Notion CMS
- * Last synced: 2026-09-15T06:59:02.470Z
+ * Last synced: 2026-09-15T07:03:39.867Z
  */
 
 export const BLOG_CATEGORIES = [
@@ -178,7 +178,7 @@ export const blogs = [
   },
   {
     "id": "the-2026-meta-ads-playbook",
-    "title": "this is a trial",
+    "title": "how are you guysss",
     "excerpt": "With algorithm shifts and privacy updates, creative quality is now your primary targeting tool. Here is the exact creative framework we use to scale brands predictably.",
     "category": "Meta Ads",
     "coverImage": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1400&auto=format&fit=crop",
