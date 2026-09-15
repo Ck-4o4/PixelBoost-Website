@@ -1,0 +1,45 @@
+name: Auto Sync Notion Blogs
+
+on:
+  schedule:
+    # Runs every hour (at minute 0)
+    - cron: '0 * * * *'
+  workflow_dispatch: # Allows manual trigger from GitHub UI anytime
+
+permissions:
+  contents: write
+
+jobs:
+  sync-notion:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Sync Blogs from Notion
+        env:
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+        run: node scripts/syncNotion.js
+
+      - name: Commit and Push if Changed
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/blogs.js
+          if git diff --staged --quiet; then
+            echo "No changes detected from Notion."
+          else
+            git commit -m "chore(cms): auto-sync latest blogs from Notion [skip ci]"
+            git push origin main
+          fi
