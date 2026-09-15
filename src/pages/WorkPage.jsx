@@ -5,6 +5,7 @@ import PortfolioGallery from '../components/PortfolioGallery';
 import VideoGallery from '../components/VideoGallery';
 import AppGallery from '../components/AppGallery';
 import MetaAdsGallery from '../components/MetaAdsGallery';
+import SEO from '../components/SEO';
 
 const projects = [
   {
@@ -244,6 +245,10 @@ const WorkPage = () => {
       paddingTop: '120px',
       overflow: 'hidden' 
     }}>
+      <SEO
+        title="Our Work & Portfolio"
+        description="Explore our diverse portfolio of digital experiences, visual identities, Meta Ads campaigns, and high-impact video shoots."
+      />
       <div className="container">
         
         {/* Header Section */}

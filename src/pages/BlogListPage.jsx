@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Clock, ArrowRight, BookOpen, ChevronRight } from 'lucide-react';
 import { blogs as fallbackBlogs, BLOG_CATEGORIES } from '../data/blogs';
+import SEO from '../components/SEO';
 
 const BlogListPage = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -46,6 +47,10 @@ const BlogListPage = () => {
       paddingBottom: '6rem',
       overflow: 'hidden'
     }}>
+      <SEO
+        title="Blog & Insights"
+        description="Explore proven agency frameworks on Meta Ads, viral video production, brand identity, and scalable growth from PixelBoost."
+      />
       <div className="container" style={{ maxWidth: '1240px', margin: '0 auto', padding: '0 1.5rem' }}>
 
         {/* Top Breadcrumb */}

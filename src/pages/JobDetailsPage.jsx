@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, ArrowUpRight, MapPin, Clock, Briefcase, Video, MonitorPlay, Film, Palette, PenTool, Users, Mail, TrendingUp, X, Upload, CheckCircle2, Loader2, AlertCircle, MessageCircle } from 'lucide-react';
 import { jobs } from '../data/jobs';
 import { WEB3FORMS_ACCESS_KEY, getWhatsAppLink } from '../config/forms';
+import SEO from '../components/SEO';
 
 // Icon Map helper to render the correct string-based icon name from data
 const IconMap = {
@@ -142,6 +143,10 @@ const JobDetailsPage = () => {
 
   return (
     <main style={{ backgroundColor: 'var(--bg-primary)', minHeight: '100vh', paddingTop: '8rem', paddingBottom: '6rem' }}>
+      <SEO
+        title={`${job.title} - Careers`}
+        description={job.excerpt}
+      />
       <div className="container">
         
         {/* Back Button */}

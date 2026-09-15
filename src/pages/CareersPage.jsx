@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, MapPin, Clock, Briefcase } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { jobs } from '../data/jobs';
+import SEO from '../components/SEO';
 
 const CareersPage = () => {
   useEffect(() => {
@@ -11,6 +12,10 @@ const CareersPage = () => {
 
   return (
     <main style={{ backgroundColor: 'var(--bg-primary)', minHeight: '100vh', paddingTop: '8rem', paddingBottom: '6rem' }}>
+      <SEO
+        title="Careers & Open Positions"
+        description="Join the PixelBoost team. Explore open roles in video editing, graphic design, business development, and digital marketing."
+      />
       <div className="container">
         
         {/* Page Header */}

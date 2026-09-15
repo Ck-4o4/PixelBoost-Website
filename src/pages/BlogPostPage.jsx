@@ -13,6 +13,7 @@ import {
   ChevronRight 
 } from 'lucide-react';
 import { blogs as fallbackBlogs } from '../data/blogs';
+import SEO from '../components/SEO';
 
 const BlogPostPage = () => {
   const { slug } = useParams();
@@ -46,6 +47,7 @@ const BlogPostPage = () => {
         padding: '2rem',
         backgroundColor: '#FAFAFA'
       }}>
+        <SEO title="Article Not Found" />
         <h2 style={{ fontSize: '2rem', fontWeight: 800, color: '#0F172A', marginBottom: '1rem' }}>
           Article Not Found
         </h2>
@@ -93,6 +95,15 @@ const BlogPostPage = () => {
       paddingBottom: '6rem',
       overflow: 'hidden'
     }}>
+      <SEO
+        title={post.title}
+        description={post.excerpt}
+        image={post.coverImage}
+        article={true}
+        category={post.category}
+        datePublished={post.date}
+        authorName={post.author?.name}
+      />
       <div className="container" style={{ maxWidth: '860px', margin: '0 auto', padding: '0 1.5rem' }}>
 
         {/* Top Breadcrumb & Navigation */}

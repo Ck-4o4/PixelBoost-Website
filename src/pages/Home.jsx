@@ -4,10 +4,12 @@ import Clients from '../components/Clients';
 import Expertise from '../components/Expertise';
 import MetaAdsGallery from '../components/MetaAdsGallery';
 import Process from '../components/Process';
+import SEO from '../components/SEO';
 
 const Home = () => {
   return (
     <main>
+      <SEO />
       <Hero />
       <Clients />
       <Expertise />
