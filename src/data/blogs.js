@@ -1,6 +1,6 @@
 /**
  * Auto-synced via Notion CMS
- * Last synced: 2026-09-15T07:05:05.251Z
+ * Last synced: 2026-09-15T07:10:48.874Z
  */
 
 export const BLOG_CATEGORIES = [
@@ -27,10 +27,7 @@ export const blogs = [
     "readTime": "1 min read",
     "featured": false,
     "tags": [
-      "Growth",
-      "Omnichannel",
-      "Retention",
-      "Funnel Optimization"
+      "Growth Marketing"
     ],
     "content": [
       {
@@ -72,10 +69,7 @@ export const blogs = [
     "readTime": "1 min read",
     "featured": false,
     "tags": [
-      "Brand Identity",
-      "UI/UX",
-      "Graphic Design",
-      "Conversion Rate"
+      "Branding & Design"
     ],
     "content": [
       {
@@ -129,10 +123,7 @@ export const blogs = [
     "readTime": "1 min read",
     "featured": false,
     "tags": [
-      "Reels",
-      "Shorts",
-      "Video Editing",
-      "Content Strategy"
+      "Video Production"
     ],
     "content": [
       {
@@ -178,7 +169,7 @@ export const blogs = [
   },
   {
     "id": "the-2026-meta-ads-playbook",
-    "title": "how are you guysss",
+    "title": "hello",
     "excerpt": "With algorithm shifts and privacy updates, creative quality is now your primary targeting tool. Here is the exact creative framework we use to scale brands predictably.",
     "category": "Meta Ads",
     "coverImage": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1400&auto=format&fit=crop",
@@ -189,12 +180,9 @@ export const blogs = [
     },
     "date": "September 15, 2026",
     "readTime": "2 min read",
-    "featured": true,
+    "featured": false,
     "tags": [
-      "Meta Ads",
-      "ROAS",
-      "Performance Creative",
-      "Media Buying"
+      "Meta Ads"
     ],
     "content": [
       {

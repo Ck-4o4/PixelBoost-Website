@@ -2,8 +2,8 @@ name: Auto Sync Notion Blogs
 
 on:
   schedule:
-    # Runs every hour (at minute 0)
-    - cron: '0 * * * *'
+    # Runs every 15 minutes
+    - cron: '*/15 * * * *'
   workflow_dispatch: # Allows manual trigger from GitHub UI anytime
 
 permissions:
@@ -40,6 +40,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes detected from Notion."
           else
-            git commit -m "chore(cms): auto-sync latest blogs from Notion [skip ci]"
+            git commit -m "chore(cms): auto-sync latest blogs from Notion"
             git push origin main
           fi
