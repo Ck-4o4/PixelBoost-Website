@@ -9,28 +9,28 @@ const Expertise = () => {
     {
       title: "Web Development",
       icon: <MonitorSmartphone size={24} />,
-      content: "Digital experiences built around your brand. We create fast, scalable web platforms that bring your positioning to life, support your customer journey and give your business a stronger digital presence.",
+      content: "We engineer high-performance, scalable web platforms. Our stack is focused on modern React (Next.js/Vite) paired with custom, tailored styling systems. We don't use templates.",
       metric: "Sub-second",
       metricLabel: "Average Load Time"
     },
     {
       title: "Digital Marketing",
       icon: <TrendingUp size={24} />,
-      content: "Marketing built around what your business needs. From SEO and paid campaigns to content and performance, we connect the right channels to create a clear path from audience to growth.",
+      content: "Data-driven marketing that scales. From SEO to highly targeted ad campaigns, we map out the exact funnel your users need to convert at the highest possible rate.",
       metric: "300%+",
       metricLabel: "Average ROI Increase"
     },
     {
       title: "App Development",
       icon: <Code2 size={24} />,
-      content: "Digital products built for real business needs. We develop smooth, reliable applications around your customers, business objectives and the experience your brand wants to deliver.",
+      content: "Native iOS and Android applications built for the modern user. We focus on incredibly smooth UX and robust backend integrations to keep your app fast and reliable.",
       metric: "4.9",
       metricLabel: "Average App Store Rating"
     },
     {
       title: "Production & Shoots",
       icon: <Camera size={24} />,
-      content: "Visual content with a clear purpose. From photography to video production, we create content that strengthens your brand, connects with your audience and supports your marketing direction.",
+      content: "High-end visual storytelling. We handle full-scale photography and video production to ensure your brand's visual identity is as extraordinary as your digital product.",
       metric: "8K",
       metricLabel: "Cinematic Quality"
     }
@@ -39,7 +39,7 @@ const Expertise = () => {
   return (
     <section id="expertise" className="section-padding" style={{ background: 'var(--bg-card)', borderTop: '1px solid var(--border-subtle)', borderBottom: '1px solid var(--border-subtle)' }}>
       <div className="container">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -47,9 +47,7 @@ const Expertise = () => {
           style={{ marginBottom: '4rem' }}
         >
           <h2 style={{ fontSize: '3rem', fontWeight: 600, letterSpacing: '-0.02em', marginBottom: '1rem' }}>Our Expertise.</h2>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', maxWidth: '650px', lineHeight: 1.6 }}>
-            Focused disciplines built to strengthen your brand and move your business forward.
-          </p>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', maxWidth: '500px' }}>Focused disciplines engineered to elevate your brand.</p>
         </motion.div>
 
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4rem' }}>
