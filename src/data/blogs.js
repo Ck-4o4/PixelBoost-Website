@@ -1,6 +1,6 @@
 /**
  * Auto-synced via Notion CMS
- * Last synced: 2026-09-16T05:58:30.642Z
+ * Last synced: 2026-09-16T10:51:47.620Z
  */
 
 export const BLOG_CATEGORIES = [
@@ -12,6 +12,48 @@ export const BLOG_CATEGORIES = [
 ];
 
 export const blogs = [
+  {
+    "id": "omnichannel-growth-engine",
+    "title": "mahima trial blog episode 1",
+    "excerpt": "Relying on a single acquisition channel is dangerous. Here is how modern brands build resilient, multi-channel growth systems that compound over time.",
+    "category": "Branding & Design",
+    "coverImage": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1400&auto=format&fit=crop",
+    "author": {
+      "name": "Mahima",
+      "role": "Contributor",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format&fit=crop"
+    },
+    "date": "October 21, 2026",
+    "readTime": "1 min read",
+    "featured": false,
+    "tags": [
+      "Branding & Design"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Brands that achieve sustained eight-figure revenues don't rely solely on one traffic source. They build a holistic ecosystem where paid media feeds organic brand awareness, which in turn fuels high-margin retention loops through email and WhatsApp marketing."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Triad of Sustainable Scale"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Top of Funnel (Paid + Viral Shoots): Generating predictable, scalable cold traffic through Meta Ads and Instagram Reels.",
+          "Middle of Funnel (Website & UX): High-converting, lightning-fast digital storefronts that maximize conversion rates.",
+          "Bottom of Funnel (Retention): WhatsApp and email automation flows capturing up to 30% of total revenue with zero additional ad spend."
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "Acquisition gets customers through the door. Experience and retention make them stay and buy repeatedly.",
+        "author": "PixelBoost Team"
+      }
+    ]
+  },
   {
     "id": "branding-principles-for-d2c-growth",
     "title": "title",
