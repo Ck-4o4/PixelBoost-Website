@@ -247,7 +247,7 @@ const WorkPage = () => {
     }}>
       <SEO
         title="Our Work & Portfolio"
-        description="Explore our diverse portfolio of digital experiences, visual identities, Meta Ads campaigns, and high-impact video shoots."
+        description="Explore our diverse portfolio of branding, digital experiences, and marketing campaign."
       />
       <div className="container">
         
@@ -266,10 +266,10 @@ const WorkPage = () => {
           </div>
           
           <h3 style={{ fontSize: '3rem', fontWeight: 800, color: '#0F172A', margin: '0 0 1rem 0', letterSpacing: '-0.02em' }}>
-            Selected Projects
+            Featured Work
           </h3>
           <p style={{ fontSize: '1.1rem', color: '#64748B', maxWidth: '600px', margin: '0 auto 2.5rem auto' }}>
-            Explore our diverse portfolio of digital experiences, visual identities, and creative campaigns.
+            Explore our diverse portfolio of branding, digital experiences, and marketing campaign.
           </p>
 
           {/* Category Filters */}

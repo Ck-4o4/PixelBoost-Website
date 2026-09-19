@@ -6,17 +6,17 @@ const Process = () => {
     {
       number: "01",
       title: "Discovery & Strategy",
-      description: "We dive deep into your business, analyzing your market, competitors, and exact user demographics to engineer a strategy that guarantees growth."
+      description: "Understanding your business, audience and goals before building the right direction."
     },
     {
       number: "02",
-      title: "Design & Engineering",
-      description: "Our award-winning team designs the aesthetic and builds the robust, scalable architecture needed to bring the vision to life flawlessly."
+      title: "Build & Create",
+      description: "Turning strategy into stronger branding, content, digital experiences and marketing."
     },
     {
       number: "03",
-      title: "Launch & Scale",
-      description: "We deploy your product and immediately ignite targeted marketing campaigns to drive massive traffic and maximize your ROI from day one."
+      title: "Launch & Improve",
+      description: "Putting the right plan into action, measuring results and improving what moves your business forward"
     }
   ];
 
@@ -38,7 +38,7 @@ const Process = () => {
             <h2 style={{ fontSize: '3rem', fontWeight: 600, letterSpacing: '-0.02em', marginBottom: '1rem' }}>The Process.</h2>
           </motion.div>
           <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto' }}>
-            A proven, transparent methodology designed for maximum impact.
+            A clear, strategic approach from understanding your business to driving growth.
           </p>
         </motion.div>
 

@@ -14,7 +14,7 @@ const CareersPage = () => {
     <main style={{ backgroundColor: 'var(--bg-primary)', minHeight: '100vh', paddingTop: '8rem', paddingBottom: '6rem' }}>
       <SEO
         title="Careers & Open Positions"
-        description="Join the PixelBoost team. Explore open roles in video editing, graphic design, business development, and digital marketing."
+        description="Join our team that thinks beyond marketing, builds with purpose, and helps businesses grow."
       />
       <div className="container">
         
@@ -29,7 +29,7 @@ const CareersPage = () => {
             Careers at PixelBoost
           </h1>
           <p style={{ color: 'var(--text-secondary)', fontSize: '1.4rem', lineHeight: 1.6 }}>
-            Join a collective of extraordinary designers, engineers, and storytellers. We are building the future of digital experiences, and we need your expertise.
+            Join our team that thinks beyond marketing, builds with purpose, and helps businesses grow.
           </p>
         </motion.div>
 
