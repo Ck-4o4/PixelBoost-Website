@@ -1,6 +1,6 @@
 /**
  * Auto-synced via Notion CMS
- * Last synced: 2026-11-08T19:50:06.354Z
+ * Last synced: 2026-11-08T23:16:40.760Z
  */
 
 export const BLOG_CATEGORIES = [
